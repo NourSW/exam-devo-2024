@@ -10,4 +10,8 @@ describe('validations tests suites - isValid', () => {
         const result = isValidGamertag('1234567');
         expect(result).toBe(false);
     });
+    test('should return false if gamertag does not contain at least one special character', () => {
+        const result = isValidGamertag('Gamer1');
+        expect(result).toBe(false);
+    });
 });
